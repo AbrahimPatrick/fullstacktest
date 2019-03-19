@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {getdata} from "../../../services/http/getdata";
 import {Link} from "react-router-dom";
-import './List.css';
 import Carousel from "../../Layout/Carousel/Carousel";
 import moment from 'moment';
 
@@ -52,7 +51,7 @@ class List extends Component {
                             posts.filter(searchingFor(this.props.term)).map((item, indice) => {
                                 return (
                                     <section key={indice} className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                        <article className="card width-100">
+                                        <article className="card width-100 margin-top-20">
                                             <header className="card-header">
                                                 <div className="row">
                                                     <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">

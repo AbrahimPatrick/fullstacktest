@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './Carousel.css';
 import phpstorm from './../../../image/phpstorm.png';
 import html from './../../../image/html.png';
 import chrome from './../../../image/chrome.png';

@@ -1,0 +1,47 @@
+img {
+  height: 500px;
+  width: 100%;
+}
+
+.min-height {
+  min-height: 720px;
+}
+
+.breadcrumb {
+  margin-top: 30px;
+}
+
+.border-secondary {
+  padding: 3px;
+  background-color: rgba(151, 150, 153, 0.4);
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.margin-top-100 {
+  margin-top: 100px;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.badge {
+  margin-left: 2px;
+}
+
+.footer {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin-top: 200px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.33);
+}
+
+.footer-p{
+  padding-top: 0.8em;
+}

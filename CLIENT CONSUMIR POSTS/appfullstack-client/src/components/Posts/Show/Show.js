@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {getdata} from "../../../services/http/getdata";
 import {Link, Redirect} from "react-router-dom";
-import './Show.css';
 import moment from 'moment';
 
 class Show extends Component {
@@ -58,7 +57,7 @@ class Show extends Component {
                 <div className="container">
                     <div className="row justify-content-center align-self-center">
                         <section className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <article className="card width-100">
+                            <article className="card width-100 margin-top-20">
                                 <header className="card-header">
                                     <div className="row">
                                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
