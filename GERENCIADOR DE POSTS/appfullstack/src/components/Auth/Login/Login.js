@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Redirect} from "react-router-dom";
-import {Helmet} from 'react-helmet';
-import './Login.css';
 import {login} from "../../../services/auth/login/login";
 import {Alert} from "react-bootstrap";
 

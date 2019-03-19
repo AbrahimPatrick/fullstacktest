@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import {Helmet} from "react-helmet";
 import { Switch, Route } from 'react-router-dom';
 import Login from "./components/Auth/Login/Login";

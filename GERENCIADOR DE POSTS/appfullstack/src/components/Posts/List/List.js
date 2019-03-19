@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {getdata} from "../../../services/getdata";
 import {Link, Redirect} from "react-router-dom";
-import './List.css';
 import {refresh} from "../../../services/auth/refresh/refresh";
 
 class List extends Component {
@@ -35,8 +34,8 @@ class List extends Component {
                             <header className="card-header">
                                 <h1 className="card-title">Postagens</h1>
                             </header>
-                            <div className="card-body">
-                                <table className="table">
+                            <div className="card-body justify-content-center align-self-center">
+                                <table className="table table-responsive">
                                     <thead>
                                     <tr>
                                         <th>#</th>

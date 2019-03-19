@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {Redirect} from "react-router-dom";
 import {getdata} from "../../../services/getdata";
-import {putdata} from "../../../services/putdata";
 import {WithContext as ReactTags} from "react-tag-input";
 import {refresh} from "../../../services/auth/refresh/refresh";
 import {Alert} from "react-bootstrap";
-import './Edit.css';
 import {post} from "../../../services/formdata/post";
 
 const KeyCodes = {

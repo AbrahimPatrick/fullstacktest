@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {post} from "../../../services/formdata/post";
 import {Redirect} from "react-router-dom";
 import {WithContext as ReactTags} from 'react-tag-input';
-import './New.css';
 import {getdata} from "../../../services/getdata";
 import {refresh} from "../../../services/auth/refresh/refresh";
 import {Alert} from "react-bootstrap";

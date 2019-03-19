@@ -1,0 +1,65 @@
+$paleta_cores: (background: rgb(234, 252, 255), background-body: rgba(87, 165, 255, 0.51), footer: rgba(0, 0, 0, 0.33));
+
+ul li {
+  list-style: none;
+  font-size: 12pt;
+}
+
+.login-card{
+  margin-top: 100px;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+
+.background {
+  background-color: map-get($paleta_cores, background);
+}
+
+.background-body {
+  background-color: map-get($paleta_cores, background-body);
+}
+
+.container-fluid {
+  margin-top: 50px;
+  min-height: 620px;
+}
+
+.badge-md {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.badge {
+  margin-left: 2px;
+}
+
+.tagsClass {
+  font-size: 16pt;
+}
+
+.removeClass {
+  font-size: 14pt;
+}
+
+.badge-md {
+  margin-right: 10px;
+  margin-bottom: 10px;
+
+}
+
+.footer {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 200px;
+  position: absolute;
+  background-color: map-get($paleta_cores, footer);
+}
+
+.footer-p{
+  padding-top: 0.8em;
+}
