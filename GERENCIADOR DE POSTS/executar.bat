@@ -1,0 +1,2 @@
+cd appfullstack
+npm start

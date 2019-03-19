@@ -1,0 +1,17 @@
+.border-secondary {
+    padding: 3px;
+    background-color: rgba(151, 150, 153, 0.4);
+}
+
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-top-100 {
+    margin-top: 100px;
+}
+
+img {
+    height: 500px;
+    width: 100%;
+}
