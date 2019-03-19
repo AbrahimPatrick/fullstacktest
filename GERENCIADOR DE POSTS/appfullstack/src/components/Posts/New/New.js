@@ -31,6 +31,7 @@ class New extends Component {
             suggestions: [],
             alerts: [],
             visible: false,
+            loading: 'Enviar'
 
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -51,7 +52,7 @@ class New extends Component {
                     image: {},
                     name_author: "",
                     name_tag: []
-                }
+                },
             }
         )
     }
@@ -91,6 +92,7 @@ class New extends Component {
 
     handleSubmit() {
         this.refs.btn.setAttribute("disabled", "disabled");
+        this.setState({loading: 'Enviando..'});
         this.state.post.name_tag = this.state.tags;
         this.forceUpdate();
         let formData = new FormData();
@@ -101,12 +103,18 @@ class New extends Component {
         formData.append('name_tag', JSON.stringify(this.state.post.name_tag));
         post('api/postar', formData).then((result) => {
             let responseJSON = result;
-            this.setState({alerts: responseJSON, visible: true, tags: []});
-            getdata('api/tags', data => this.setState(data));
+            if(responseJSON) {
+                this.setState({alerts: responseJSON, visible: true, tags: []});
+                getdata('api/tags', data => this.setState(data));
+                this.refs.myForm.reset();
+                this.setState(this.getInitialState());
+                this.setState({loading: 'Enviar'});
+                this.refs.btn.removeAttribute("disabled");
+            } else {
+                this.setState({loading: 'Enviar'});
+                this.refs.btn.removeAttribute("disabled");
+            }
         });
-        this.setState(this.getInitialState());
-        this.refs.myForm.reset();
-        this.refs.btn.removeAttribute("disabled");
     }
 
     onChange(e) {
@@ -218,7 +226,7 @@ class New extends Component {
                                             </div>
                                             <div className="form-row float-right">
                                                 <div className="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <input type="button" ref="btn" value="Salvar"
+                                                    <input type="button" ref="btn" value={this.state.loading}
                                                            onClick={this.handleSubmit}
                                                            className="btn btn-primary onclick" />
                                                     &nbsp;

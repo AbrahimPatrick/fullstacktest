@@ -38,6 +38,7 @@ class Edit extends Component {
             suggestions: [],
             alerts: [],
             visible: false,
+            loading: 'Enviar'
         };
         this.onInputChange = this.onInputChange.bind(this);
         this.onFileChange = this.onFileChange.bind(this);
@@ -88,6 +89,8 @@ class Edit extends Component {
     }
 
     handleSubmit = () => {
+        this.refs.btn.setAttribute("disabled", "disabled");
+        this.setState({loading: 'Enviando..'});
         this.state.tags.map((item, indice) => {
             return (
                 this.state.tags[indice].id = parseInt(item.id),
@@ -112,6 +115,8 @@ class Edit extends Component {
             let responseJSON = result;
             this.setState({alerts: responseJSON, visible: true});
             getdata('api/posts/' + this.state.id, data => this.setState(data));
+            this.setState({loading: 'Enviar'});
+            this.refs.btn.removeAttribute("disabled");
         });
     }
 
@@ -250,12 +255,9 @@ class Edit extends Component {
                                             </div>
                                             <div className="form-row float-right">
                                                 <div className="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <button type="button" value="update" onClick={this.handleSubmit}
-                                                            ref={btn => {
-                                                                this.btn = btn;
-                                                            }}
-                                                            className="btn btn-primary">Salvar
-                                                    </button>
+                                                    <input type="button" ref="btn" value={this.state.loading}
+                                                           onClick={this.handleSubmit}
+                                                           className="btn btn-primary onclick" />
                                                 </div>
                                             </div>
                                         </form>
